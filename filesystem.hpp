@@ -1,16 +1,16 @@
 //#include <ofstream>
 //#include <ifstream>
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
 class FileSystem
 {
-private:
-std::fstream file; 
-public:
-	
-	void addReader(const char * name_reader);
-	void deleteReader(const char * name_reader);
-	void addBooks( char * name_reader,char * book_title);
-	
+      private:
+	std::fstream file;
+
+      public:
+	void addReader(const char *name_reader);
+	void deleteReader(const char *name_reader);
+	void addBooks(char *name_reader, char *book_title);
+	void deleteBooks(char *name_reader, char *book_title);
 };
