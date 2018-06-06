@@ -62,6 +62,7 @@ void FileSystem::deleteBooks(char *name_reader, char *book_title)
 
 					file2 << mass[i];
 				}
+
 			file2.close();
 		}
 	else

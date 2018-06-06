@@ -13,4 +13,5 @@ class FileSystem
 	void deleteReader(const char *name_reader);
 	void addBooks(char *name_reader, char *book_title);
 	void deleteBooks(char *name_reader, char *book_title);
+	void RAB();
 };
