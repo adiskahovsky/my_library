@@ -25,6 +25,7 @@ void Menu::Introduce()
 		case 1:
 
 			// obj.addBooks();
+			obj.show();
 
 			break;
 
@@ -106,6 +107,7 @@ void Menu::Introduce()
 					std::cout << "Input name:" << std::endl;
 
 					std::cin >> name;
+					obj.AddToList(name);
 					for (int i = 0; i < 80; i++)
 						{
 							name[i] = name[i];
@@ -135,6 +137,7 @@ void Menu::Introduce()
 					std::cout << "Input name:" << std::endl;
 
 					std::cin >> name;
+					obj.DeleteFromList(name);
 					for (int i = 0; i < 80; i++)
 						{
 							name[i] = name[i];
