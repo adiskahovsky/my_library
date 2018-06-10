@@ -10,3 +10,7 @@ menu.o: menu.cpp filesystem.hpp menu.hpp
 
 filesystem.o: filesystem.cpp filesystem.hpp
 	g++ filesystem.cpp -c
+
+clean:
+	del *.o *.exe
+	

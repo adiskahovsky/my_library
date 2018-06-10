@@ -81,6 +81,7 @@ void FileSystem::AddToList(const char *name_reader)
 
 
 			file << (name_reader) << ' ';
+			std::cout<<"HelloWorld"<<std::endl;
 			file.close();
 		}
 	else
@@ -113,8 +114,8 @@ void FileSystem::DeleteFromList(const char *name_reader)
 				}
 			file.close();
 			std::ofstream file(this->List);
-			for (int i = 0; i < 100; i++)
-				std::cout << array[i] << std::endl;
+			//for (int i = 0; i < 100; i++)
+				//std::cout << array[i] << std::endl;
 			for (int i = 0; i < 100; i++)
 				{
 					file << array[i];
@@ -132,16 +133,103 @@ void FileSystem::DeleteFromList(const char *name_reader)
 
 void FileSystem::show()
 {
-	std::ifstream file(this->List);
-	char array[100][100] = {};
+	std::fstream file(this->List);
+	char array[100] = {};
+	char name[100]={};
+	char names_of_books[100] = {};
+	char books[100]={};
+	/*
+	for(int i=0;i<100;i++)
+	{	
+		file>>array[i];
+
+	}
+	*/
+	//file.seekp(100, std::ios::beg);
+	file.getline(array, 100);
+	file.close();
+	/*file.close();
 	for (int i = 0; i < 100; i++)
+	{	
+		
+		names_of_books[i] = array[i];
+		if (array[i] == ' ')
+			{
+				names_of_books[i] =
+					'.';
+				names_of_books[i
+					 + 1] =
+					't';
+				names_of_books[i
+					 + 2] =
+					'x';
+				names_of_books[i
+					 + 3] =
+					't';
+				names_of_books[i
+					+4] =
+					' ';
+				break;
+				
+				
+			}
+	}
+	*/
+	
+	
+	
+	
+	for(int i=0;array[i]!=' ';i++)
+		name[i] = array[i];
+	
+	
+		for (int i = 0; i < 80; i++)
 		{
-			for (int j = 0; j < 100; j++)
+			name[i] = name[i];
+			if (name[i] == 0)
 				{
-					file >> array[i][j];
+					name[i] =
+						'.';
+					name[i
+						 + 1] =
+						't';
+					name[i
+						 + 2] =
+						'x';
+					name[i
+						 + 3] =
+						't';
+					break;
 				}
 		}
-	/*
+		file.open(name);
+		file.getline(books,100);
+	
+	
+		
+	
+	
+	for(int i=0;i<80;i++) std::cout<<array[i];
+	std::cout<<std::endl;
+	//for(int i=0;i<80;i++) std::cout<<name[i];
+	
+	
+	/*	
+	file.open(name);
+	
+	
+	for(int i=0;i<100;i++)
+	{	
+		if(array[i]!=' ')
+		std::cout<<array[i];
+		else std::cout<<std::endl;
+	}
+		
+	
+		
+		
+	
+
 	for (int i = 0; i < 100; i++)
 		{
 			for (int j = 0; j < 100; j++)
